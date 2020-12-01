@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Shaquille\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Shaquille\\.nuget\\packages"
+    ]
+  }
+}
