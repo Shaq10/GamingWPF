@@ -14,10 +14,10 @@ of consoles and choose which to purchase. The project will include all the docum
 required to show the process of what was done, how and why
 
 # Sprints
-![image](C:/github/Eng71/IndividualProject/PreSprints.png)
+![image](https://github.com/Shaq10/GamingWPF/blob/main/PreSprints.png)
 
 ## Sprint 1 - 30/11/2020
-![image](C:/github/Eng71/IndividualProject/Sprint1.png)
+![image](https://github.com/Shaq10/GamingWPF/blob/main/Sprint1.png)
 ### Sprint Goal
 - [x] Build Database
 - [ ] Create business layer
