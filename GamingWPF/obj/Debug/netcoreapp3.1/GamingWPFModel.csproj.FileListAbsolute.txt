@@ -61,3 +61,4 @@ C:\github\Eng71\IndividualProject\GamingWPF\obj\Debug\netcoreapp3.1\GamingWPFMod
 C:\github\Eng71\IndividualProject\GamingWPF\obj\Debug\netcoreapp3.1\GamingWPFModel.dll
 C:\github\Eng71\IndividualProject\GamingWPF\obj\Debug\netcoreapp3.1\GamingWPFModel.pdb
 C:\github\Eng71\IndividualProject\GamingWPF\obj\Debug\netcoreapp3.1\GamingWPFModel.genruntimeconfig.cache
+C:\github\Eng71\IndividualProject\GamingWPF\obj\Debug\netcoreapp3.1\GamingWPFModel.csprojAssemblyReference.cache
