@@ -1,5 +1,4 @@
 C:\github\Eng71\IndividualProject\GamingWPFGUI\obj\Debug\netcoreapp3.1\GamingWPFGUI.csprojAssemblyReference.cache
-C:\github\Eng71\IndividualProject\GamingWPFGUI\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\github\Eng71\IndividualProject\GamingWPFGUI\obj\Debug\netcoreapp3.1\App.g.cs
 C:\github\Eng71\IndividualProject\GamingWPFGUI\obj\Debug\netcoreapp3.1\GamingWPFGUI_MarkupCompile.cache
 C:\github\Eng71\IndividualProject\GamingWPFGUI\obj\Debug\netcoreapp3.1\GamingWPFGUI_MarkupCompile.lref
@@ -52,7 +51,6 @@ C:\github\Eng71\IndividualProject\GamingWPFGUI\bin\Debug\netcoreapp3.1\GamingWPF
 C:\github\Eng71\IndividualProject\GamingWPFGUI\bin\Debug\netcoreapp3.1\GamingWPFModel.dll
 C:\github\Eng71\IndividualProject\GamingWPFGUI\bin\Debug\netcoreapp3.1\GamingWPFBusiness.pdb
 C:\github\Eng71\IndividualProject\GamingWPFGUI\bin\Debug\netcoreapp3.1\GamingWPFModel.pdb
-C:\github\Eng71\IndividualProject\GamingWPFGUI\obj\Debug\netcoreapp3.1\MainWindow.baml
 C:\github\Eng71\IndividualProject\GamingWPFGUI\obj\Debug\netcoreapp3.1\GamingWPFGUI.g.resources
 C:\github\Eng71\IndividualProject\GamingWPFGUI\obj\Debug\netcoreapp3.1\GamingWPFGUI.AssemblyInfoInputs.cache
 C:\github\Eng71\IndividualProject\GamingWPFGUI\obj\Debug\netcoreapp3.1\GamingWPFGUI.AssemblyInfo.cs
@@ -61,3 +59,7 @@ C:\github\Eng71\IndividualProject\GamingWPFGUI\obj\Debug\netcoreapp3.1\GamingWPF
 C:\github\Eng71\IndividualProject\GamingWPFGUI\obj\Debug\netcoreapp3.1\GamingWPFGUI.dll
 C:\github\Eng71\IndividualProject\GamingWPFGUI\obj\Debug\netcoreapp3.1\GamingWPFGUI.pdb
 C:\github\Eng71\IndividualProject\GamingWPFGUI\obj\Debug\netcoreapp3.1\GamingWPFGUI.genruntimeconfig.cache
+C:\github\Eng71\IndividualProject\GamingWPFGUI\obj\Debug\netcoreapp3.1\Games.g.cs
+C:\github\Eng71\IndividualProject\GamingWPFGUI\obj\Debug\netcoreapp3.1\GamingHome.g.cs
+C:\github\Eng71\IndividualProject\GamingWPFGUI\obj\Debug\netcoreapp3.1\Games.baml
+C:\github\Eng71\IndividualProject\GamingWPFGUI\obj\Debug\netcoreapp3.1\GamingHome.baml

@@ -9,12 +9,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamingWPFTests", "..\Gaming
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamingWPFBusiness", "..\GamingWPFBusiness\GamingWPFBusiness.csproj", "{ECEF9991-8A36-42E1-BFCF-434E1F75F3A4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamingWPFGUI", "..\GamingWPFGUI\GamingWPFGUI.csproj", "{6611E9A1-578F-4164-9BC2-E8D2268318CE}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{070D0EC7-9736-4EDD-A869-8FB4530C7182}"
 	ProjectSection(SolutionItems) = preProject
+		..\PreSprints.png = ..\PreSprints.png
 		..\README.md = ..\README.md
+		..\Sprint1.png = ..\Sprint1.png
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamingWPFGUI2", "..\GamingWPFGUI2\GamingWPFGUI2.csproj", "{795943AC-F490-4D0F-AD4F-49E320438524}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,10 +36,10 @@ Global
 		{ECEF9991-8A36-42E1-BFCF-434E1F75F3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECEF9991-8A36-42E1-BFCF-434E1F75F3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECEF9991-8A36-42E1-BFCF-434E1F75F3A4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6611E9A1-578F-4164-9BC2-E8D2268318CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6611E9A1-578F-4164-9BC2-E8D2268318CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6611E9A1-578F-4164-9BC2-E8D2268318CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6611E9A1-578F-4164-9BC2-E8D2268318CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{795943AC-F490-4D0F-AD4F-49E320438524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{795943AC-F490-4D0F-AD4F-49E320438524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{795943AC-F490-4D0F-AD4F-49E320438524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{795943AC-F490-4D0F-AD4F-49E320438524}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

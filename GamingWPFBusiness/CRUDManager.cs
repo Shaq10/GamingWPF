@@ -90,6 +90,9 @@ namespace GamingWPFBusiness
                     Manufacturer = manufacturer.Trim(),
                     OnlineCompatible = online.ToString()
                 };
+
+                db.Add(newConsole);
+                db.SaveChanges();
             }
         }
 
@@ -101,6 +104,8 @@ namespace GamingWPFBusiness
                 {
                     GenreName = genreName.Trim()
                 };
+                db.Add(newGenre);
+                db.SaveChanges();
             }
         }
 
@@ -119,6 +124,47 @@ namespace GamingWPFBusiness
                     ReleaseDate = release,
                     Multiplayers = multi
                 };
+                db.Add(newGame);
+                db.SaveChanges();
+            }
+        }
+
+        public void CreateCustomer(string customerID, string firstName, string lastName, string email, int houseNum, string firstLineAddress, 
+            string secondLineAddress, string city, string postcode, string country, string mobile, DateTime dob, char gender) {
+            using (var db = new GamingContext()) {
+                var newCustomer = new Customer()
+                {
+                    CustomerId = customerID.Trim(),
+                    FirstName = firstName.Trim(),
+                    LastName = lastName.Trim(),
+                    Email = email.Trim(),
+                    HouseNum = houseNum,
+                    FirstLineAddress = firstLineAddress.Trim(),
+                    SecondLineAddress = secondLineAddress.Trim(),
+                    City = city.Trim(),
+                    Postcode = postcode.Trim(),
+                    Country = country.Trim(),
+                    Mobile = mobile.Trim(),
+                    Dob = dob,
+                    Gender = gender.ToString()
+                };
+
+                db.Add(newCustomer);
+                db.SaveChanges();
+            }
+        }
+
+        public void CreateOrder(string customerID, string gameID, DateTime orderDate, DateTime deliveryDate, decimal cost) {
+            using (var db = new GamingContext()){
+                var newOrder = new Order() {
+                    CustomerId = customerID.Trim(),
+                    GameId = gameID.Trim(),
+                    OrderDate = orderDate,
+                    DeliveryDate = deliveryDate,
+                    Cost = cost
+                };
+                db.Add(newOrder);
+                db.SaveChanges();
             }
         }
 

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\github\Eng71\IndividualProject\GamingWPFGUI\App.xaml
-11151548125
+2169609595
 
-5-1400723455
+6-1479367180
 2151782491493
-MainWindow.xaml;
+Games.xaml;GamingHome.xaml;
 
-True
+False
 
