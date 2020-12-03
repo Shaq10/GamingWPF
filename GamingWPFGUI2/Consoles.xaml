@@ -1,4 +1,4 @@
-﻿<Page x:Class="GamingWPFGUI2.Genres"
+﻿<Page x:Class="GamingWPFGUI2.Consoles"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:GamingWPFGUI2"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Genres">
+      Title="Consoles">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -17,7 +17,9 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
-            <Grid.RowDefinitions>                
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
@@ -25,10 +27,14 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label x:Name="GenreId" Grid.Row="0" Grid.Column="0" Background="LightBlue" >Genre Id</Label>
-            <TextBox x:Name="Text_GenreId" Grid.Row="0" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="GenreName" Grid.Row="1" Grid.Column="0" Background="LightBlue" >Genre Name</Label>
-            <TextBox x:Name="Text_GenreName" Grid.Row="1" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="ConsoleId" Grid.Row="0" Grid.Column="0" Background="LightBlue" >Console Id</Label>
+            <TextBox x:Name="Text_ConsoleId" Grid.Row="0" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="ConsoleName" Grid.Row="1" Grid.Column="0" Background="LightBlue" >Console Name</Label>
+            <TextBox x:Name="Text_ConsoleName" Grid.Row="1" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="Manufacturer" Grid.Row="2" Grid.Column="0" Background="LightBlue" >Manufacturer</Label>
+            <TextBox x:Name="Text_Manufacturer" Grid.Row="2" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="OnlineCompatible" Grid.Row="3" Grid.Column="0" Background="LightBlue" >Online Compatible</Label>
+            <TextBox x:Name="Text_OnlineCompatible" Grid.Row="3" Grid.Column="1" Background="LightYellow"></TextBox>
         </Grid>
         <Grid Grid.Column= "1">
             <Grid.RowDefinitions>
@@ -41,12 +47,11 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <ListBox x:Name="ListBoxGenres" Background="Beige"  Grid.Row="0" Grid.ColumnSpan="4" SelectionChanged="ListBoxGenre_SelectionChanged"></ListBox>
+            <ListBox x:Name="ListBoxConsoles" Background="Beige"  Grid.Row="0" Grid.ColumnSpan="4" SelectionChanged="ListBoxConsole_SelectionChanged"></ListBox>
             <Button x:Name="UpdateButton" Grid.Row="1" Grid.Column="0" Click="UpdateButtonClicked">UPDATE</Button>
             <Button x:Name="CreateButton" Grid.Row="1" Grid.Column="1" Click="CreateButtonClicked">CREATE</Button>
             <Button x:Name="DeleteButton" Grid.Row="1" Grid.Column="2" Click="DeleteButtonClicked">DELETE</Button>
             <Button x:Name="ClearButton" Grid.Row="1" Grid.Column="3" Click="ClearButtonClicked">CLEAR</Button>
         </Grid>
-
     </Grid>
 </Page>

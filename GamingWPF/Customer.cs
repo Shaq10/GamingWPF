@@ -23,7 +23,7 @@ namespace GamingWPF
         public string Postcode { get; set; }
         public string Country { get; set; }
         public string Mobile { get; set; }
-        public DateTime Dob { get; set; }
+        public DateTime? Dob { get; set; }
         public string Gender { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }

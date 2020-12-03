@@ -256,6 +256,47 @@ namespace GamingWPFBusiness
             }
         }
 
+        public void DeleteGenre(int genreid)
+        {
+            using (var db = new GamingContext())
+            {
+                SelectedGenre = db.Genres.Where(g => g.GenreId == genreid).FirstOrDefault();
+                db.Genres.Remove(SelectedGenre);
+                db.SaveChanges();
+            }
+        }
+
+        public void DeleteConsole(int consoleid)
+        {
+            using (var db = new GamingContext())
+            {
+                SelectedConsole = db.Consoles.Where(c => c.ConsoleId == consoleid).FirstOrDefault();
+                db.Consoles.Remove(SelectedConsole);
+                db.SaveChanges();
+            }
+        }
+
+        public void DeleteCustomer(string customerid)
+        {
+            using (var db = new GamingContext())
+            {
+                SelectedCustomer = db.Customers.Where(x => x.CustomerId == customerid).FirstOrDefault();
+                db.Customers.Remove(SelectedCustomer);
+                db.SaveChanges();
+            }
+        }
+
+        public void DeleteOrder(int orderid)
+        {
+            using (var db = new GamingContext())
+            {
+                SelectedOrder = db.Orders.Where(g => g.OrderId == orderid).FirstOrDefault();
+                db.Orders.Remove(SelectedOrder);
+                db.SaveChanges();
+            }
+        }
+
+
 
 
     }

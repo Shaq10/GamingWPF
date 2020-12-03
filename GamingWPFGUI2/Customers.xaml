@@ -1,0 +1,84 @@
+﻿<Page x:Class="GamingWPFGUI2.Customers"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GamingWPFGUI2"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Customers">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label x:Name="CustomerId" Grid.Row="0" Grid.Column="0" Background="LightBlue" >Customer Id</Label>
+            <TextBox x:Name="Text_CustomerId" Grid.Row="0" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="FirstName" Grid.Row="1" Grid.Column="0" Background="LightBlue" >First Name</Label>
+            <TextBox x:Name="Text_FirstName" Grid.Row="1" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="LastName" Grid.Row="2" Grid.Column="0" Background="LightBlue" >Last Name</Label>
+            <TextBox x:Name="Text_LastName" Grid.Row="2" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="Email" Grid.Row="3" Grid.Column="0" Background="LightBlue" >Email</Label>
+            <TextBox x:Name="Text_Email" Grid.Row="3" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="HouseNum" Grid.Row="4" Grid.Column="0" Background="LightBlue" >House Nummber</Label>
+            <TextBox x:Name="Text_HouseNum" Grid.Row="4" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="FirstLineAddress" Grid.Row="5" Grid.Column="0" Background="LightBlue" >First Line Address</Label>
+            <TextBox x:Name="Text_FirstLineAddress" Grid.Row="5" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="SecondLineAddress" Grid.Row="6" Grid.Column="0" Background="LightBlue" >Second Line Address</Label>
+            <TextBox x:Name="Text_SecondLineAddress" Grid.Row="6" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="City" Grid.Row="7" Grid.Column="0" Background="LightBlue" >City</Label>
+            <TextBox x:Name="Text_City" Grid.Row="7" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="Postcode" Grid.Row="8" Grid.Column="0" Background="LightBlue" >Postcode</Label>
+            <TextBox x:Name="Text_Postcode" Grid.Row="8" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="Country" Grid.Row="9" Grid.Column="0" Background="LightBlue" >Country</Label>
+            <TextBox x:Name="Text_Country" Grid.Row="9" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="Mobile" Grid.Row="10" Grid.Column="0" Background="LightBlue" >Mobile</Label>
+            <TextBox x:Name="Text_Mobile" Grid.Row="10" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="Dob" Grid.Row="11" Grid.Column="0" Background="LightBlue" >D.O.B</Label>
+            <DatePicker x:Name="DP_Dob" Grid.Row="11" Grid.Column="1" ></DatePicker>
+            <Label x:Name="Gender" Grid.Row="12" Grid.Column="0" Background="LightBlue" >Gender</Label>
+            <TextBox x:Name="Text_Gender" Grid.Row="12" Grid.Column="1" Background="LightYellow"></TextBox>
+        </Grid>
+        <Grid Grid.Column= "1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="350"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="ListBoxCustomers" Background="Beige"  Grid.Row="0" Grid.ColumnSpan="4" SelectionChanged="ListBoxCustomer_SelectionChanged"></ListBox>
+            <Button x:Name="UpdateButton" Grid.Row="1" Grid.Column="0" Click="UpdateButtonClicked">UPDATE</Button>
+            <Button x:Name="CreateButton" Grid.Row="1" Grid.Column="1" Click="CreateButtonClicked">CREATE</Button>
+            <Button x:Name="DeleteButton" Grid.Row="1" Grid.Column="2" Click="DeleteButtonClicked">DELETE</Button>
+            <Button x:Name="ClearButton" Grid.Row="1" Grid.Column="3" Click="ClearButtonClicked">CLEAR</Button>
+        </Grid>
+    </Grid>
+</Page>

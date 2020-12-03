@@ -68,15 +68,7 @@ namespace GamingWPFGUI2
         }
 
         public void ClearButtonClicked(object sender, RoutedEventArgs e) {
-                ListBoxGames.SelectedItem = null;
-            //Text_GameId.Clear();
-            //Text_GenreId.Clear();
-            //Text_ConsoleId.Clear();
-            //Text_Title.Clear();
-            //Text_AgeRating.Clear();
-            //Text_Price.Clear();
-            //Text_Publisher.Clear();
-            //Text_Multiplayers.Clear();
+            ListBoxGames.SelectedItem = null;
             ClearAll();
             
         }

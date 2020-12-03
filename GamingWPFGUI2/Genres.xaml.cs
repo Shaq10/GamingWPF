@@ -23,6 +23,7 @@ namespace GamingWPFGUI2
         public Genres()
         {
             InitializeComponent();
+            PopulateListBox();
         }
 
         private void PopulateListBox()
@@ -39,6 +40,11 @@ namespace GamingWPFGUI2
             }
         }
 
+        private void ClearAll() {
+            Text_GenreId.Clear();
+            Text_GenreName.Clear();
+        }
+
         private void ListBoxGenre_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             if (ListBoxGenres.SelectedItem != null)
@@ -51,8 +57,7 @@ namespace GamingWPFGUI2
         public void ClearButtonClicked(object sender, RoutedEventArgs e)
         {
             ListBoxGenres.SelectedItem = null;
-            Text_GenreId.Clear();
-            Text_GenreName.Clear();
+            ClearAll();
 
         }
 
@@ -75,7 +80,20 @@ namespace GamingWPFGUI2
                 ListBoxGenres.SelectedItem = _crudManager.SelectedGenre;
                 PopulateGenreFields();
             }
+        }
 
+        private void DeleteButtonClicked(object sender, RoutedEventArgs e) {
+            if (ListBoxGenres.SelectedItem != null)
+            {
+                _crudManager.DeleteGenre(int.Parse(Text_GenreId.Text));
+                ListBoxGenres.ItemsSource = null;
+                PopulateListBox();
+                PopulateGenreFields();
+            }
+            else {
+                MessageBox.Show("Select a genre to delete");
+            }
+            ClearAll();
         }
     }
 }
