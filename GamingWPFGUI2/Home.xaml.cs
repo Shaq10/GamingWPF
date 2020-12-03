@@ -55,5 +55,42 @@ namespace GamingWPFGUI2
                 PopulateGameFields();
             }
         }
+
+        private void UpdateButtonClicked(object sender, RoutedEventArgs e)
+        {
+            _crudManager.UpdateGame(Text_GameId.Text, int.Parse(Text_GenreId.Text), int.Parse(Text_ConsoleId.Text), Text_Title.Text, int.Parse(Text_AgeRating.Text), decimal.Parse(Text_Price.Text), Text_Publisher.Text, System.DateTime.Parse(Text_ReleaseDate.Text), int.Parse(Text_Multiplayers.Text));
+            ListBoxGames.ItemsSource = null;
+            // put back the screen data
+            PopulateListBox();
+            ListBoxGames.SelectedItem = _crudManager.SelectedGame;
+            PopulateGameFields();
+        }
+
+        //private bool isEmpty() {
+        //    foreach (Control c in this.Controls) {
+        //        if (c is TextBox) {
+        //            TextBox textBox = c as TextBox;
+        //            if (textBox.Text == string.Empty)
+        //            {
+        //                return true;
+        //            }
+        //            else {
+        //                return false;
+        //            }
+        //        }
+        //    }
+        //}
+
+        //private void CreateButtonClicked(object sender, RoutedEventArgs e)
+        //{
+        //    if (ListBoxGames.ItemsSource == null && (Text_GameId.Text && Text_GenreId.Text && )) {
+        //        _crudManager.CreateGame(Text_GameId.Text, int.Parse(Text_GenreId.Text), int.Parse(Text_ConsoleId.Text), Text_Title.Text, int.Parse(Text_AgeRating.Text), decimal.Parse(Text_Price.Text), Text_Publisher.Text, System.DateTime.Parse(Text_ReleaseDate.Text), int.Parse(Text_Multiplayers.Text));
+        //        ListBoxGames.ItemsSource = null;
+        //        PopulateListBox();
+        //        ListBoxGames.SelectedItem = _crudManager.SelectedGame;
+        //        PopulateGameFields();
+        //    }
+            
+        //}
     }
 }

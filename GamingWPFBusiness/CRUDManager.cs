@@ -168,6 +168,25 @@ namespace GamingWPFBusiness
             }
         }
 
+        // Updating Entities
+
+        public void UpdateGame(string gameID, int consoleID, int genreID, string title, int age,
+            decimal price, string publisher, DateTime release, int multi){
+            using (var db = new GamingContext()) {
+                SelectedGame = db.Games.Where(g => g.GameId == gameID).FirstOrDefault();
+                SelectedGame.ConsoleId = consoleID;
+                SelectedGame.GenreId = genreID;
+                SelectedGame.Title = title;
+                SelectedGame.AgeRating = age;
+                SelectedGame.Price = price;
+                SelectedGame.Publisher = publisher;
+                SelectedGame.ReleaseDate = release;
+                SelectedGame.Multiplayers = multi;
+
+                db.SaveChanges();
+            }
+        }
+
 
 
     }

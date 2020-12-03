@@ -102,7 +102,7 @@ namespace GamingWPFTests
             using (var db = new GamingContext())
             {
                 var count = db.Games.Count();
-                _crudManager.CreateGame("WATCHPS4", 1, 1, "Watchdog", 12, (decimal)27.99, "Ubisoft", new System.DateTime(01/01/21), 32 );
+                _crudManager.CreateGame("WATCHPS4", 1, 1, "Watchdog", 12, (decimal)27.99, "Ubisoft", new System.DateTime(01/01/2021), 32 );
                 Assert.AreEqual(count + 1, db.Games.Count());
             }
         }

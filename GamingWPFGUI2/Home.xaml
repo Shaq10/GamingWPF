@@ -52,7 +52,19 @@
             <TextBox x:Name="Text_Multiplayers" Grid.Row="8" Grid.Column="1" Background="LightYellow"></TextBox>
         </Grid>
         <Grid Grid.Column= "1">
-            <ListBox x:Name="ListBoxGames" Background="Beige"  Grid.Row="4" Grid.Column="0" SelectionChanged="ListBoxGame_SelectionChanged"></ListBox>            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="350"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="ListBoxGames" Background="Beige"  Grid.Row="0" Grid.ColumnSpan="3" SelectionChanged="ListBoxGame_SelectionChanged"></ListBox>
+            <Button x:Name="UpdateButton" Grid.Row="1" Grid.Column="0" Click="UpdateButtonClicked">UPDATE</Button>
+            <Button x:Name="CreateButton" Grid.Row="1" Grid.Column="1">CREATE</Button>
+            <Button x:Name="DeleteButton" Grid.Row="1" Grid.Column="2">DELETE</Button>
         </Grid>
 
     </Grid>
