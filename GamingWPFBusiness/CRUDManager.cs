@@ -83,12 +83,12 @@ namespace GamingWPFBusiness
 
         // Creating Entities
 
-        public void CreateConsole(string consoleName, string manufacturer, char online) {
+        public void CreateConsole(string consoleName, string manufacturer, string online) {
             using (var db = new GamingContext()) {
                 var newConsole = new GamingWPF.Console() {
                     ConsoleName = consoleName.Trim(),
                     Manufacturer = manufacturer.Trim(),
-                    OnlineCompatible = online.ToString()
+                    OnlineCompatible = online.Trim(),
                 };
 
                 db.Add(newConsole);
@@ -183,6 +183,75 @@ namespace GamingWPFBusiness
                 SelectedGame.ReleaseDate = release;
                 SelectedGame.Multiplayers = multi;
 
+                db.SaveChanges();
+            }
+        }
+
+        public void UpdateGenre(int genreId, string genreName)
+        {
+            using (var db = new GamingContext())
+            {
+                SelectedGenre = db.Genres.Where(g => g.GenreId == genreId).FirstOrDefault();
+                SelectedGenre.GenreName = genreName;
+
+                db.SaveChanges();
+            }
+        }
+
+        public void UpdateConsole(int consoleId, string consoleName, string manufacturer, string online)
+        {
+            using (var db = new GamingContext())
+            {
+                SelectedConsole = db.Consoles.Where(c => c.ConsoleId == consoleId).FirstOrDefault();
+                SelectedConsole.ConsoleName = consoleName;
+                SelectedConsole.Manufacturer = manufacturer;
+                SelectedConsole.OnlineCompatible = online;
+
+                db.SaveChanges();
+            }
+        }
+
+        public void UpdateCustomer(string customerID, string firstName, string lastName, string email, int houseNum, string firstLineAddress,
+            string secondLineAddress, string city, string postcode, string country, string mobile, DateTime dob, char gender)
+        {
+            using (var db = new GamingContext()) {
+                SelectedCustomer = db.Customers.Where(x => x.CustomerId == customerID).FirstOrDefault();
+                SelectedCustomer.FirstName = firstName;
+                SelectedCustomer.LastName = lastName;
+                SelectedCustomer.Email = email;
+                SelectedCustomer.HouseNum = houseNum;
+                SelectedCustomer.FirstLineAddress = firstLineAddress;
+                SelectedCustomer.SecondLineAddress = secondLineAddress;
+                SelectedCustomer.City = city;
+                SelectedCustomer.Postcode = postcode;
+                SelectedCustomer.Country = country;
+                SelectedCustomer.Mobile = mobile;
+                SelectedCustomer.Dob = dob;
+                SelectedCustomer.Gender = gender.ToString();
+
+                db.SaveChanges();
+            }
+        }
+
+        public void UpdateOrder(int orderId, string customerID, string gameID, DateTime orderDate, DateTime deliveryDate, decimal cost) {
+            using (var db = new GamingContext()) {
+                SelectedOrder = db.Orders.Where(o => o.OrderId == orderId).FirstOrDefault();
+                SelectedOrder.CustomerId = customerID;
+                SelectedOrder.GameId = gameID;
+                SelectedOrder.OrderDate = orderDate;
+                SelectedOrder.DeliveryDate = deliveryDate;
+                SelectedOrder.Cost = cost;
+
+                db.SaveChanges();
+            }
+        }
+
+        // Deleting records from table
+
+        public void DeleteGame(string gameid) {
+            using (var db = new GamingContext()) {
+                SelectedGame = db.Games.Where(g => g.GameId == gameid).FirstOrDefault();
+                db.Games.Remove(SelectedGame);
                 db.SaveChanges();
             }
         }

@@ -19,7 +19,7 @@ namespace GamingWPF
         public int AgeRating { get; set; }
         public decimal Price { get; set; }
         public string Publisher { get; set; }
-        public DateTime ReleaseDate { get; set; }
+        public DateTime? ReleaseDate { get; set; }
         public int Multiplayers { get; set; }
 
         public virtual Console Console { get; set; }

@@ -47,7 +47,7 @@
             <Label x:Name="Publisher" Grid.Row="6" Grid.Column="0" Background="LightBlue" >Publisher</Label>
             <TextBox x:Name="Text_Publisher" Grid.Row="6" Grid.Column="1" Background="LightYellow"></TextBox>
             <Label x:Name="ReleaseDate" Grid.Row="7" Grid.Column="0" Background="LightBlue" >ReleaseDate</Label>
-            <TextBox x:Name="Text_ReleaseDate" Grid.Row="7" Grid.Column="1" Background="LightYellow"></TextBox>
+            <DatePicker x:Name="DP_ReleaseDate" Grid.Row="7" Grid.Column="1"></DatePicker>
             <Label x:Name="Multiplayers" Grid.Row="8" Grid.Column="0" Background="LightBlue" >Multiplayers</Label>
             <TextBox x:Name="Text_Multiplayers" Grid.Row="8" Grid.Column="1" Background="LightYellow"></TextBox>
         </Grid>
@@ -60,11 +60,13 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <ListBox x:Name="ListBoxGames" Background="Beige"  Grid.Row="0" Grid.ColumnSpan="3" SelectionChanged="ListBoxGame_SelectionChanged"></ListBox>
+            <ListBox x:Name="ListBoxGames" Background="Beige"  Grid.Row="0" Grid.ColumnSpan="4" SelectionChanged="ListBoxGame_SelectionChanged"></ListBox>
             <Button x:Name="UpdateButton" Grid.Row="1" Grid.Column="0" Click="UpdateButtonClicked">UPDATE</Button>
-            <Button x:Name="CreateButton" Grid.Row="1" Grid.Column="1">CREATE</Button>
-            <Button x:Name="DeleteButton" Grid.Row="1" Grid.Column="2">DELETE</Button>
+            <Button x:Name="CreateButton" Grid.Row="1" Grid.Column="1" Click="CreateButtonClicked">CREATE</Button>
+            <Button x:Name="DeleteButton" Grid.Row="1" Grid.Column="2" Click="DeleteButtonClicked">DELETE</Button>
+            <Button x:Name="ClearButton" Grid.Row="1" Grid.Column="3" Click="ClearButtonClicked">CLEAR</Button>
         </Grid>
 
     </Grid>

@@ -80,7 +80,7 @@ namespace GamingWPFTests
             using (var db = new GamingContext())
             {
                 var count = db.Consoles.Count();
-                _crudManager.CreateConsole("PlayStation5", "Sony", 'Y') ;
+                _crudManager.CreateConsole("PlayStation5", "Sony", "Y") ;
                 Assert.AreEqual(count + 1, db.Consoles.Count());
             }
         }

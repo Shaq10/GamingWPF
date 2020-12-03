@@ -42,9 +42,20 @@ namespace GamingWPFGUI2
                 Text_AgeRating.Text = _crudManager.SelectedGame.AgeRating.ToString();
                 Text_Price.Text = _crudManager.SelectedGame.Price.ToString();
                 Text_Publisher.Text = _crudManager.SelectedGame.Publisher;
-                Text_ReleaseDate.Text = _crudManager.SelectedGame.ReleaseDate.ToString("dd-mm-yyyy");
+                DP_ReleaseDate.SelectedDate = _crudManager.SelectedGame.ReleaseDate;
                 Text_Multiplayers.Text = _crudManager.SelectedGame.Multiplayers.ToString();
             }
+        }
+
+        private void ClearAll() {
+            Text_GameId.Clear();
+            Text_GenreId.Clear();
+            Text_ConsoleId.Clear();
+            Text_Title.Clear();
+            Text_AgeRating.Clear();
+            Text_Price.Clear();
+            Text_Publisher.Clear();
+            Text_Multiplayers.Clear();
         }
 
         private void ListBoxGame_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
@@ -56,41 +67,56 @@ namespace GamingWPFGUI2
             }
         }
 
+        public void ClearButtonClicked(object sender, RoutedEventArgs e) {
+                ListBoxGames.SelectedItem = null;
+            //Text_GameId.Clear();
+            //Text_GenreId.Clear();
+            //Text_ConsoleId.Clear();
+            //Text_Title.Clear();
+            //Text_AgeRating.Clear();
+            //Text_Price.Clear();
+            //Text_Publisher.Clear();
+            //Text_Multiplayers.Clear();
+            ClearAll();
+            
+        }
+
         private void UpdateButtonClicked(object sender, RoutedEventArgs e)
         {
-            _crudManager.UpdateGame(Text_GameId.Text, int.Parse(Text_GenreId.Text), int.Parse(Text_ConsoleId.Text), Text_Title.Text, int.Parse(Text_AgeRating.Text), decimal.Parse(Text_Price.Text), Text_Publisher.Text, System.DateTime.Parse(Text_ReleaseDate.Text), int.Parse(Text_Multiplayers.Text));
+            _crudManager.UpdateGame(Text_GameId.Text, int.Parse(Text_GenreId.Text), int.Parse(Text_ConsoleId.Text), Text_Title.Text, int.Parse(Text_AgeRating.Text), decimal.Parse(Text_Price.Text), Text_Publisher.Text, DP_ReleaseDate.SelectedDate.Value, int.Parse(Text_Multiplayers.Text));
             ListBoxGames.ItemsSource = null;
-            // put back the screen data
             PopulateListBox();
             ListBoxGames.SelectedItem = _crudManager.SelectedGame;
             PopulateGameFields();
         }
 
-        //private bool isEmpty() {
-        //    foreach (Control c in this.Controls) {
-        //        if (c is TextBox) {
-        //            TextBox textBox = c as TextBox;
-        //            if (textBox.Text == string.Empty)
-        //            {
-        //                return true;
-        //            }
-        //            else {
-        //                return false;
-        //            }
-        //        }
-        //    }
-        //}
+        private void CreateButtonClicked(object sender, RoutedEventArgs e)
+        {
+            if (ListBoxGames.SelectedItem == null)
+            {
+                _crudManager.CreateGame(Text_GameId.Text, int.Parse(Text_GenreId.Text), int.Parse(Text_ConsoleId.Text), Text_Title.Text, int.Parse(Text_AgeRating.Text), decimal.Parse(Text_Price.Text), Text_Publisher.Text, DP_ReleaseDate.SelectedDate.Value, int.Parse(Text_Multiplayers.Text));
+                ListBoxGames.ItemsSource = null;
+                PopulateListBox();
+                ListBoxGames.SelectedItem = _crudManager.SelectedGame;
+                PopulateGameFields();
+            }
 
-        //private void CreateButtonClicked(object sender, RoutedEventArgs e)
-        //{
-        //    if (ListBoxGames.ItemsSource == null && (Text_GameId.Text && Text_GenreId.Text && )) {
-        //        _crudManager.CreateGame(Text_GameId.Text, int.Parse(Text_GenreId.Text), int.Parse(Text_ConsoleId.Text), Text_Title.Text, int.Parse(Text_AgeRating.Text), decimal.Parse(Text_Price.Text), Text_Publisher.Text, System.DateTime.Parse(Text_ReleaseDate.Text), int.Parse(Text_Multiplayers.Text));
-        //        ListBoxGames.ItemsSource = null;
-        //        PopulateListBox();
-        //        ListBoxGames.SelectedItem = _crudManager.SelectedGame;
-        //        PopulateGameFields();
-        //    }
-            
-        //}
+        }
+
+        private void DeleteButtonClicked(object sender, RoutedEventArgs e)
+        {
+            if (ListBoxGames.SelectedItem != null)
+            {
+                _crudManager.DeleteGame(Text_GameId.Text);
+                ListBoxGames.ItemsSource = null;
+                PopulateListBox();
+                PopulateGameFields();
+            }
+            else {
+                MessageBox.Show("Select a game to delete");
+            }
+            ClearAll();
+
+        }
     }
 }
