@@ -9,6 +9,64 @@
       Title="Games">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label x:Name="GameId" Grid.Row="0" Grid.Column="0" Background="LightBlue" >GameId</Label>
+            <TextBox x:Name="Text_GameId" Grid.Row="0" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="GenreId" Grid.Row="1" Grid.Column="0" Background="LightBlue" >GenreId</Label>
+            <TextBox x:Name="Text_GenreId" Grid.Row="1" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="ConsoleId" Grid.Row="2" Grid.Column="0" Background="LightBlue" >ConsoleId</Label>
+            <TextBox x:Name="Text_ConsoleId" Grid.Row="2" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="Title" Grid.Row="3" Grid.Column="0" Background="LightBlue" >Title</Label>
+            <TextBox x:Name="Text_Title" Grid.Row="3" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="AgeRating" Grid.Row="4" Grid.Column="0" Background="LightBlue" >Age Rating</Label>
+            <TextBox x:Name="Text_AgeRating" Grid.Row="4" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="Price" Grid.Row="5" Grid.Column="0" Background="LightBlue" >Price</Label>
+            <TextBox x:Name="Text_Price" Grid.Row="5" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="Publisher" Grid.Row="6" Grid.Column="0" Background="LightBlue" >Publisher</Label>
+            <TextBox x:Name="Text_Publisher" Grid.Row="6" Grid.Column="1" Background="LightYellow"></TextBox>
+            <Label x:Name="ReleaseDate" Grid.Row="7" Grid.Column="0" Background="LightBlue" >ReleaseDate</Label>
+            <DatePicker x:Name="DP_ReleaseDate" Grid.Row="7" Grid.Column="1"></DatePicker>
+            <Label x:Name="Multiplayers" Grid.Row="8" Grid.Column="0" Background="LightBlue" >Multiplayers</Label>
+            <TextBox x:Name="Text_Multiplayers" Grid.Row="8" Grid.Column="1" Background="LightYellow"></TextBox>
+        </Grid>
+        <Grid Grid.Column= "1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="350"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="ListBoxGames" Background="Beige"  Grid.Row="0" Grid.ColumnSpan="4" SelectionChanged="ListBoxGame_SelectionChanged"></ListBox>
+            <Button x:Name="UpdateButton" Grid.Row="1" Grid.Column="0" Click="UpdateButtonClicked">UPDATE</Button>
+            <Button x:Name="CreateButton" Grid.Row="1" Grid.Column="1" Click="CreateButtonClicked">CREATE</Button>
+            <Button x:Name="DeleteButton" Grid.Row="1" Grid.Column="2" Click="DeleteButtonClicked">DELETE</Button>
+            <Button x:Name="ClearButton" Grid.Row="1" Grid.Column="3" Click="ClearButtonClicked">CLEAR</Button>
+        </Grid>
     </Grid>
 </Page>
