@@ -53,8 +53,26 @@ the user stories which I have set for Sprint 3.
 I managed to use my time much better than the previous sprint, taking into account there was more time to get things done as I didn't have an exam today. I did come across some small blocks mainly 
 regarding the GUI however after doing some research I was able to solve these issues and in the process also learnt some more information about navigation windows.
 I did spend some time in the evening working on the user stories but I also had to redo my Sparkhire video due to audio issues with the previous one, so this took some of my time which I had allocated.
+
 ## Sprint 3 03/12/2020
+![image](https://github.com/Shaq10/GamingWPF/blob/main/Sprint3.png)
 ### Sprint Goal
+- [x] Create new Customer from GUI
+- [x] Create new Game from GUI
+- [x] From the GUI, the user can delete a Game from the database
+- [x] User can create Console from GUI
+- [x] User can view all Customers
+- [x] User can update Game details
 ### Sprint Review
+I managed to complete all the stories which I planned for this sprint. I also had time to start working on other functionality related to user stories I plan to put in the next sprint
+### Sprint Retrospective
+My time was utilised well for this sprint. I had an issue regarding entering dates but after doing more research I figured out how to implement a date picker . I also learnt more about how navigation 
+windows operate whilst trying to sort out my own navigation for the application. In hindsight I could have added more user stories to this Sprint as I didn't expect to complete everything so soon
+
+## Sprint 4 04/12/2020
+### Sprint Goal
+
+### Sprint Review
+
 ### Sprint Retrospective
 
