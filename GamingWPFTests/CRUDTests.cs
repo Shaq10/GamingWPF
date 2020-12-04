@@ -106,5 +106,47 @@ namespace GamingWPFTests
                 Assert.AreEqual(count + 1, db.Games.Count());
             }
         }
+
+        [Test]
+        public void WhenANewOrderIsCreatedNumberOfOrdersIncrementsBy1()
+        {
+            using (var db = new GamingContext())
+            {
+                var count = db.Orders.Count();
+                var newCustomer = new Customer() {
+                    CustomerId = "JCRED", 
+                    FirstName = "Justin", 
+                    LastName = "Credible", 
+                    Email = "JCredible20@hotmail.co.uk", 
+                    HouseNum = 12, 
+                    FirstLineAddress = "Crud Street", 
+                    SecondLineAddress = "Miscellaneous Avenue", 
+                    City = "Birmingham",
+                    Postcode = "BC45 RG", 
+                    Country = "Brazil", 
+                    Mobile = "+18575736278", 
+                    Dob = new System.DateTime(05/05/12), 
+                    Gender = 'M'.ToString()
+                };
+
+                var newGame = new Game() {
+                    GameId = "WATCHPS4", 
+                    ConsoleId = 1, 
+                    GenreId = 1, 
+                    Title = "Watchdog", 
+                    AgeRating = 12, 
+                    Price = (decimal)27.99, 
+                    Publisher = "Ubisoft", 
+                    ReleaseDate = new System.DateTime(01/01/2021), 
+                    Multiplayers = 32
+                };
+
+                var first = newCustomer.CustomerId;
+                var second = newGame.GameId;
+
+                _crudManager.CreateOrder(first, second, System.DateTime.Now, System.DateTime.Now.AddDays(3), (decimal)24.99);
+                Assert.AreEqual(count + 1, db.Orders.Count());
+            }
+        }
     }
 }

@@ -44,7 +44,7 @@
             <TextBox x:Name="Text_LastName" Grid.Row="2" Grid.Column="1" Background="LightYellow"></TextBox>
             <Label x:Name="Email" Grid.Row="3" Grid.Column="0" Background="LightBlue" >Email</Label>
             <TextBox x:Name="Text_Email" Grid.Row="3" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="HouseNum" Grid.Row="4" Grid.Column="0" Background="LightBlue" >House Nummber</Label>
+            <Label x:Name="HouseNum" Grid.Row="4" Grid.Column="0" Background="LightBlue" >House Number</Label>
             <TextBox x:Name="Text_HouseNum" Grid.Row="4" Grid.Column="1" Background="LightYellow"></TextBox>
             <Label x:Name="FirstLineAddress" Grid.Row="5" Grid.Column="0" Background="LightBlue" >First Line Address</Label>
             <TextBox x:Name="Text_FirstLineAddress" Grid.Row="5" Grid.Column="1" Background="LightYellow"></TextBox>

@@ -10,31 +10,29 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using GamingWPFBusiness;
 
 namespace GamingWPFGUI2
 {
     /// <summary>
-    /// Interaction logic for Home.xaml
+    /// Interaction logic for CustomerMenu.xaml
     /// </summary>
-
-    
-    public partial class Home : Page
+    public partial class CustomerMenu : Page
     {
-        public Home()
+        public CustomerMenu()
         {
             InitializeComponent();
         }
 
-        private void ManagerButtonClicked(object sender, RoutedEventArgs e) {
-            ManagerMenu menu = new ManagerMenu();
-            this.NavigationService.Navigate(menu);
+        private void OrdersButtonClicked(object sender, RoutedEventArgs e)
+        {
+            Orders orders = new Orders();
+            this.NavigationService.Navigate(orders);
         }
 
-        private void CustomerButtonClicked(object sender, RoutedEventArgs e)
+        private void CustomersButtonClicked(object sender, RoutedEventArgs e)
         {
-            CustomerMenu cust = new CustomerMenu();
-            this.NavigationService.Navigate(cust);
+            Customers customers = new Customers();
+            this.NavigationService.Navigate(customers);
         }
     }
 }

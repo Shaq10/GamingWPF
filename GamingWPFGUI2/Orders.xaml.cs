@@ -15,26 +15,22 @@ using GamingWPFBusiness;
 namespace GamingWPFGUI2
 {
     /// <summary>
-    /// Interaction logic for Home.xaml
+    /// Interaction logic for Orders.xaml
     /// </summary>
-
-    
-    public partial class Home : Page
+    public partial class Orders : Page
     {
-        public Home()
+        CRUDManager _crudManager = new CRUDManager();
+        public Orders()
         {
             InitializeComponent();
+            PopulateListBox();
         }
 
-        private void ManagerButtonClicked(object sender, RoutedEventArgs e) {
-            ManagerMenu menu = new ManagerMenu();
-            this.NavigationService.Navigate(menu);
-        }
-
-        private void CustomerButtonClicked(object sender, RoutedEventArgs e)
+        private void PopulateListBox()
         {
-            CustomerMenu cust = new CustomerMenu();
-            this.NavigationService.Navigate(cust);
+            ListBoxCustomers.ItemsSource = _crudManager.RetrieveAllCustomers();
+            ListBoxGames.ItemsSource = _crudManager.RetrieveAllGames();
+            ListBoxOrders.ItemsSource = _crudManager.RetrieveAllOrders();
         }
     }
 }

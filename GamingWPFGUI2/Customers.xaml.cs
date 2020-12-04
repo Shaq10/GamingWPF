@@ -106,7 +106,7 @@ namespace GamingWPFGUI2
         {
             if (ListBoxCustomers.SelectedItem != null)
             {
-                _crudManager.DeleteGame(Text_CustomerId.Text);
+                _crudManager.DeleteCustomer(Text_CustomerId.Text);
                 ListBoxCustomers.ItemsSource = null;
                 PopulateListBox();
                 PopulateCustomerFields();
