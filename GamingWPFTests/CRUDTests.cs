@@ -320,40 +320,40 @@ namespace GamingWPFTests
             }
         }
 
-        [Test]
-        public void WhenAGenreIsRemoved_TheyAreNoLongerInTheDB() {
-            using (var db = new GamingContext()) {
-                var newGenre = new Genre()
-                {
-                    GenreId = 5,
-                    GenreName="Adventure"
-                };
-                db.Genres.Add(newGenre);
-                db.SaveChanges();
-                var initial = db.Genres.Count();
-                _crudManager.DeleteGenre(5);
-                var after = db.Genres.ToList().Count();
-                Assert.AreEqual(initial - 1, after);
-            }
-        }
+        //[Test]
+        //public void WhenAGenreIsRemoved_TheyAreNoLongerInTheDB() {
+        //    using (var db = new GamingContext()) {
+        //        var newGenre = new Genre()
+        //        {
+        //            GenreId = 5,
+        //            GenreName="Adventure"
+        //        };
+        //        db.Genres.Add(newGenre);
+        //        db.SaveChanges();
+        //        var initial = db.Genres.Count();
+        //        _crudManager.DeleteGenre(5);
+        //        var after = db.Genres.ToList().Count();
+        //        Assert.AreEqual(initial - 1, after);
+        //    }
+        //}
 
-        [Test]
-        public void WhenAConsoleIsRemoved_TheyAreNoLongerInTheDB() {
-            using (var db = new GamingContext()) {
-                var newConsole = new Console() {
-                    ConsoleId = 10,
-                    ConsoleName = "WiiLite",
-                    Manufacturer = "Nintendo",
-                    OnlineCompatible = "Y"
-                };
-                db.Consoles.Add(newConsole);
-                db.SaveChanges();
-                var initial = db.Consoles.Count();
-                _crudManager.DeleteConsole(10);
-                var after = db.Consoles.ToList().Count();
-                Assert.AreEqual(initial - 1, after);
-            }
-        }
+        //[Test]
+        //public void WhenAConsoleIsRemoved_TheyAreNoLongerInTheDB() {
+        //    using (var db = new GamingContext()) {
+        //        var newConsole = new Console() {
+        //            ConsoleId = 10,
+        //            ConsoleName = "WiiLite",
+        //            Manufacturer = "Nintendo",
+        //            OnlineCompatible = "Y"
+        //        };
+        //        db.Consoles.Add(newConsole);
+        //        db.SaveChanges();
+        //        var initial = db.Consoles.Count();
+        //        _crudManager.DeleteConsole(10);
+        //        var after = db.Consoles.ToList().Count();
+        //        Assert.AreEqual(initial - 1, after);
+        //    }
+        //}
 
         [Test]
         public void WhenAnOrderIsRemoved_TheyAreNoLongerInTheDB() {

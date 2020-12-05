@@ -63,22 +63,64 @@ namespace GamingWPFGUI2
 
         private void UpdateButtonClicked(object sender, RoutedEventArgs e)
         {
-            _crudManager.UpdateConsole(int.Parse(Text_ConsoleId.Text), Text_ConsoleName.Text, Text_Manufacturer.Text, Text_OnlineCompatible.Text);
-            ListBoxConsoles.ItemsSource = null;
-            PopulateListBox();
-            ListBoxConsoles.SelectedItem = _crudManager.SelectedConsole;
-            PopulateConsoleFields();
+            if (Text_ConsoleName.Text.Length > 30)
+            {
+                MessageBox.Show("Console Name is too long");
+            }
+            else if (Text_ConsoleName.Text.Length < 1)
+            {
+                MessageBox.Show("Console Name cannot be empty");
+            }
+            else if (Text_Manufacturer.Text.Length > 30) {
+                MessageBox.Show("Manufacturer is too many characters");
+            }
+            else if (Text_Manufacturer.Text.Length < 1) {
+                MessageBox.Show("Manufacturer cannot be empty");
+            }
+            else if (Text_OnlineCompatible.Text != "Y" || Text_OnlineCompatible.Text != "N") {
+                MessageBox.Show("Online compatibility must be either a Y for Yes or N for No");
+            }
+            else {
+                _crudManager.UpdateConsole(int.Parse(Text_ConsoleId.Text), Text_ConsoleName.Text, Text_Manufacturer.Text, Text_OnlineCompatible.Text);
+                ListBoxConsoles.ItemsSource = null;
+                PopulateListBox();
+                ListBoxConsoles.SelectedItem = _crudManager.SelectedConsole;
+                PopulateConsoleFields();
+            }
+            
         }
 
         private void CreateButtonClicked(object sender, RoutedEventArgs e)
         {
             if (ListBoxConsoles.SelectedItem == null)
             {
-                _crudManager.CreateConsole(Text_ConsoleName.Text, Text_Manufacturer.Text, Text_OnlineCompatible.Text);
-                ListBoxConsoles.ItemsSource = null;
-                PopulateListBox();
-                ListBoxConsoles.SelectedItem = _crudManager.SelectedConsole;
-                PopulateConsoleFields();
+                if (Text_ConsoleName.Text.Length > 30)
+                {
+                    MessageBox.Show("Console Name is too long");
+                }
+                else if (Text_ConsoleName.Text.Length < 1)
+                {
+                    MessageBox.Show("Console Name cannot be empty");
+                }
+                else if (Text_Manufacturer.Text.Length > 30)
+                {
+                    MessageBox.Show("Manufacturer is too many characters");
+                }
+                else if (Text_Manufacturer.Text.Length < 1)
+                {
+                    MessageBox.Show("Manufacturer cannot be empty");
+                }
+                else if (Text_OnlineCompatible.Text != "Y" || Text_OnlineCompatible.Text != "N")
+                {
+                    MessageBox.Show("Online compatibility must be either a Y for Yes or N for No");
+                }
+                else {
+                    _crudManager.CreateConsole(Text_ConsoleName.Text, Text_Manufacturer.Text, Text_OnlineCompatible.Text);
+                    ListBoxConsoles.ItemsSource = null;
+                    PopulateListBox();
+                    ListBoxConsoles.SelectedItem = _crudManager.SelectedConsole;
+                    PopulateConsoleFields();
+                }                
             }
         }
 

@@ -12,7 +12,6 @@ namespace GamingWPF
         {
             Games = new HashSet<Game>();
         }
-        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ConsoleId { get; set; }
         public string ConsoleName { get; set; }
         public string Manufacturer { get; set; }
