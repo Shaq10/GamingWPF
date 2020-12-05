@@ -70,9 +70,18 @@ My time was utilised well for this sprint. I had an issue regarding entering dat
 windows operate whilst trying to sort out my own navigation for the application. In hindsight I could have added more user stories to this Sprint as I didn't expect to complete everything so soon
 
 ## Sprint 4 04/12/2020
+![image](https://github.com/Shaq10/GamingWPF/blob/main/Sprint4.png)
 ### Sprint Goal
+- [x] Update Console details in GUI
+- [x] Delete Console in database from GUI
+- [x] Create Genre from GUI
+- [x] Display all Orders made
+- [x] Update Customer details from GUI
+- [x] Delete Customer in database from GUI
+- [x] Delete Genre in database from GUI
 
 ### Sprint Review
+Again I completed all of the user stories which I planned to achieve. The majority of CRUD functionality was implemented for all of the tables and the pages are linking well which will improve the user experience. Some unit testing was also carried out to ensure that everything functions correctly and all tests pass
 
 ### Sprint Retrospective
-
+I prioritised my user stories in a way which would allow me to spend more time in the morning on the more difficult tasks. I had a big blocker regarding an Order entry which takes two foreign keys however I managed to solve this after research and speaking with others who also had the exact same problem. In the next sprint I will complete all the function CRUD functionality remaining in the backlog 
