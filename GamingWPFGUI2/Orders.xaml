@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
@@ -19,14 +19,30 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Margin="5">
-                <ListBox x:Name="ListBoxCustomers" Background="Beige"></ListBox>
+                <ListBox x:Name="ListBoxCustomers" Background="Beige" SelectionChanged="ListBoxCustomer_SelectionChanged"></ListBox>
             </Grid>
             <Grid Grid.Row="1" Margin="5">
-                <ListBox x:Name="ListBoxGames" Background="Beige"></ListBox>
+                <ListBox x:Name="ListBoxGames" Background="Beige" SelectionChanged="ListBoxGame_SelectionChanged"></ListBox>
             </Grid>
         </Grid>
         <Grid Grid.Column="1">
-            <ListBox x:Name="ListBoxOrders" Background="MintCream"></ListBox>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="ListBoxOrders" Background="MintCream"  Grid.Row="0" Grid.ColumnSpan="4" SelectionChanged="ListBoxOrder_SelectionChanged"></ListBox>
+            <Label x:Name="UpdateDelivery" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Background="LightBlue">Update Delivery Date</Label>
+            <DatePicker x:Name="DP_Delivery" Grid.Column="3" Grid.Row="1" SelectedDateChanged="DPSelectionChanged"></DatePicker>
+            <Button x:Name="UpdateButton" Grid.Row="2" Grid.Column="0" Click="UpdateButtonClicked">UPDATE</Button>
+            <Button x:Name="CreateButton" Grid.Row="2" Grid.Column="1" Click="CreateButtonClicked">CREATE</Button>
+            <Button x:Name="DeleteButton" Grid.Row="2" Grid.Column="2" Click="DeleteButtonClicked">DELETE</Button>
         </Grid>
         
     </Grid>

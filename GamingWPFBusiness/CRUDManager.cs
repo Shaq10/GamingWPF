@@ -233,15 +233,10 @@ namespace GamingWPFBusiness
             }
         }
 
-        public void UpdateOrder(int orderId, string customerID, string gameID, DateTime orderDate, DateTime deliveryDate, decimal cost) {
+        public void UpdateOrder(int orderId, DateTime deliveryDate) {
             using (var db = new GamingContext()) {
-                SelectedOrder = db.Orders.Where(o => o.OrderId == orderId).FirstOrDefault();
-                SelectedOrder.CustomerId = customerID;
-                SelectedOrder.GameId = gameID;
-                SelectedOrder.OrderDate = orderDate;
+                SelectedOrder = db.Orders.Where(o => o.OrderId == orderId).FirstOrDefault();            
                 SelectedOrder.DeliveryDate = deliveryDate;
-                SelectedOrder.Cost = cost;
-
                 db.SaveChanges();
             }
         }

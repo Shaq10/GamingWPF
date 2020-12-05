@@ -7,9 +7,8 @@ namespace GamingWPF
     public partial class Order
     {
         public override string ToString()
-        {
-            //return $"{OrderId} - {Customer.FirstName} - {Game.Title}";
-            return $"{OrderId} - {CustomerId} - {GameId}";
+        {       
+            return $"{OrderId} - {CustomerId} - {GameId} Ordered on: {OrderDate.ToString("dd/MM/yyyy")} Will be delivered on: {DeliveryDate.ToString("dd/MM/yyyy")}";
         }
     }
 }

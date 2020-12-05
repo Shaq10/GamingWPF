@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
@@ -11,7 +12,6 @@ namespace GamingWPF
         {
             Orders = new HashSet<Order>();
         }
-
         public string CustomerId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
