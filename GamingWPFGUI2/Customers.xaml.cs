@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -81,24 +82,198 @@ namespace GamingWPFGUI2
 
         private void UpdateButtonClicked(object sender, RoutedEventArgs e)
         {
-            _crudManager.UpdateCustomer(Text_CustomerId.Text, Text_FirstName.Text, Text_LastName.Text, Text_Email.Text, int.Parse(Text_HouseNum.Text), Text_FirstLineAddress.Text, 
-                Text_SecondLineAddress.Text, Text_City.Text, Text_Postcode.Text, Text_Country.Text, Text_Mobile.Text,DP_Dob.SelectedDate.Value, char.Parse(Text_Gender.Text));
-            ListBoxCustomers.ItemsSource = null;
-            PopulateListBox();
-            ListBoxCustomers.SelectedItem = _crudManager.SelectedCustomer;
-            PopulateCustomerFields();
+            int result;
+            Regex regex = new Regex(@"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([azA-Z]{2,4}|[0-9]{1,3})(\]?)$");
+            if (Text_CustomerId.Text.Length > 10)
+            {
+                MessageBox.Show("Customer ID cannot be longer than 10 characters");
+            }
+            else if (Text_CustomerId.Text.Length < 1)
+            {
+                MessageBox.Show("Customer ID cannot be empty");
+            }
+            else if (Text_FirstName.Text.Length > 30)
+            {
+                MessageBox.Show("First Name cannot be longer than 30 characters");
+            }
+            else if (Text_FirstName.Text.Length < 1)
+            {
+                MessageBox.Show("First Name cannot be empty");
+            }
+            else if (Text_LastName.Text.Length > 30)
+            {
+                MessageBox.Show("Last Name cannot be longer than 30 characters");
+            }
+            else if (Text_LastName.Text.Length < 1)
+            {
+                MessageBox.Show("Last Name cannot be empty");
+            }
+            else if (Text_Email.Text.Length < 1)
+            {
+                MessageBox.Show("Email cannot be empty");
+            }
+            else if (regex.Match(Text_Email.Text).Success == false)
+            {
+                MessageBox.Show("Email is not in the correct format");
+            }
+            else if (int.TryParse(Text_HouseNum.Text.ToString(), out result) == false)
+            {
+                MessageBox.Show("House number must be an integer");
+            }
+            else if (Text_HouseNum.Text.Length < 1)
+            {
+                MessageBox.Show("House number cannot be empty");
+            }
+            else if (Text_FirstLineAddress.Text.Length < 1)
+            {
+                MessageBox.Show("First line of address cannot be empty");
+            }
+            else if (Text_City.Text.Length > 30)
+            {
+                MessageBox.Show("City cannot be more than 30 characters");
+            }
+            else if (Text_City.Text.Length < 1)
+            {
+                MessageBox.Show("City cannot be empty");
+            }
+            else if (Text_Postcode.Text.Length > 10)
+            {
+                MessageBox.Show("Postcode is too long");
+            }
+            else if (Text_Postcode.Text.Length < 1)
+            {
+                MessageBox.Show("Postcode cannot be empty");
+            }
+            else if (Text_Country.Text.Length > 30)
+            {
+                MessageBox.Show("Country cannot be greater than 30 characters");
+            }
+            else if (Text_Country.Text.Length < 1)
+            {
+                MessageBox.Show("Country cannot be empty");
+            }
+            else if (Text_Mobile.Text.Length > 18)
+            {
+                MessageBox.Show("Mobile number is too long");
+            }
+            else if (Text_Mobile.Text.Length < 1)
+            {
+                MessageBox.Show("Mobile number cannot be empty");
+            }
+            else if (Text_Gender.Text.Length != 1) {
+                MessageBox.Show("Gender must be one character");
+            }
+            else
+            {
+                _crudManager.UpdateCustomer(Text_CustomerId.Text, Text_FirstName.Text, Text_LastName.Text, Text_Email.Text, int.Parse(Text_HouseNum.Text), Text_FirstLineAddress.Text,
+                Text_SecondLineAddress.Text, Text_City.Text, Text_Postcode.Text, Text_Country.Text, Text_Mobile.Text, DP_Dob.SelectedDate.Value, char.Parse(Text_Gender.Text));
+                ListBoxCustomers.ItemsSource = null;
+                PopulateListBox();
+                ListBoxCustomers.SelectedItem = _crudManager.SelectedCustomer;
+                PopulateCustomerFields();
+            }
+            
         }
 
         private void CreateButtonClicked(object sender, RoutedEventArgs e)
         {
             if (ListBoxCustomers.SelectedItem == null)
             {
-                _crudManager.CreateCustomer(Text_CustomerId.Text, Text_FirstName.Text, Text_LastName.Text, Text_Email.Text, int.Parse(Text_HouseNum.Text), Text_FirstLineAddress.Text,
+                int result;
+                Regex regex = new Regex(@"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([azA-Z]{2,4}|[0-9]{1,3})(\]?)$");
+                if (Text_CustomerId.Text.Length > 10)
+                {
+                    MessageBox.Show("Customer ID cannot be longer than 10 characters");
+                }
+                else if (Text_CustomerId.Text.Length < 1)
+                {
+                    MessageBox.Show("Customer ID cannot be empty");
+                }
+                else if (Text_FirstName.Text.Length > 30)
+                {
+                    MessageBox.Show("First Name cannot be longer than 30 characters");
+                }
+                else if (Text_FirstName.Text.Length < 1)
+                {
+                    MessageBox.Show("First Name cannot be empty");
+                }
+                else if (Text_LastName.Text.Length > 30)
+                {
+                    MessageBox.Show("Last Name cannot be longer than 30 characters");
+                }
+                else if (Text_LastName.Text.Length < 1)
+                {
+                    MessageBox.Show("Last Name cannot be empty");
+                }
+                else if (Text_Email.Text.Length < 1)
+                {
+                    MessageBox.Show("Email cannot be empty");
+                }
+                else if (regex.Match(Text_Email.Text).Success == false)
+                {
+                    MessageBox.Show("Email is not in the correct format");
+                }
+                else if (int.TryParse(Text_HouseNum.Text.ToString(), out result) == false)
+                {
+                    MessageBox.Show("House number must be an integer");
+                }
+                else if (Text_HouseNum.Text.Length < 1)
+                {
+                    MessageBox.Show("House number cannot be empty");
+                }
+                else if (Text_FirstLineAddress.Text.Length < 1)
+                {
+                    MessageBox.Show("First line of address cannot be empty");
+                }
+                else if (Text_City.Text.Length > 30)
+                {
+                    MessageBox.Show("City cannot be more than 30 characters");
+                }
+                else if (Text_City.Text.Length < 1)
+                {
+                    MessageBox.Show("City cannot be empty");
+                }
+                else if (Text_Postcode.Text.Length > 10)
+                {
+                    MessageBox.Show("Postcode is too long");
+                }
+                else if (Text_Postcode.Text.Length < 1)
+                {
+                    MessageBox.Show("Postcode cannot be empty");
+                }
+                else if (Text_Country.Text.Length > 30)
+                {
+                    MessageBox.Show("Country cannot be greater than 30 characters");
+                }
+                else if (Text_Country.Text.Length < 1)
+                {
+                    MessageBox.Show("Country cannot be empty");
+                }
+                else if (Text_Mobile.Text.Length > 18)
+                {
+                    MessageBox.Show("Mobile number is too long");
+                }
+                else if (Text_Mobile.Text.Length < 1)
+                {
+                    MessageBox.Show("Mobile number cannot be empty");
+                }
+                else if (DP_Dob.SelectedDate == null)
+                {
+                    MessageBox.Show("D.O.B must be selected");
+                }
+                else if (Text_Gender.Text.Length != 1)
+                {
+                    MessageBox.Show("Gender must be one character");
+                }
+                else {
+                    _crudManager.CreateCustomer(Text_CustomerId.Text, Text_FirstName.Text, Text_LastName.Text, Text_Email.Text, int.Parse(Text_HouseNum.Text), Text_FirstLineAddress.Text,
                 Text_SecondLineAddress.Text, Text_City.Text, Text_Postcode.Text, Text_Country.Text, Text_Mobile.Text, DP_Dob.SelectedDate.Value, char.Parse(Text_Gender.Text));
-                ListBoxCustomers.ItemsSource = null;
-                PopulateListBox();
-                ListBoxCustomers.SelectedItem = _crudManager.SelectedCustomer;
-                PopulateCustomerFields();
+                    ListBoxCustomers.ItemsSource = null;
+                    PopulateListBox();
+                    ListBoxCustomers.SelectedItem = _crudManager.SelectedCustomer;
+                    PopulateCustomerFields();
+                }
+                
             }
         }
 
