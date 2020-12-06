@@ -63,22 +63,42 @@ namespace GamingWPFGUI2
 
         private void UpdateButtonClicked(object sender, RoutedEventArgs e)
         {
-            _crudManager.UpdateGenre(int.Parse(Text_GenreId.Text), Text_GenreName.Text); 
-            ListBoxGenres.ItemsSource = null;
-            PopulateListBox();
-            ListBoxGenres.SelectedItem = _crudManager.SelectedGenre;
-            PopulateGenreFields();
+            if (Text_GenreName.Text.Length > 30)
+            {
+                MessageBox.Show("Genre Name is too long");
+            }
+            else if (Text_GenreName.Text.Length < 1)
+            {
+                MessageBox.Show("Genre Name cannot be empty");
+            }
+            else {
+                _crudManager.UpdateGenre(int.Parse(Text_GenreId.Text), Text_GenreName.Text);
+                ListBoxGenres.ItemsSource = null;
+                PopulateListBox();
+                ListBoxGenres.SelectedItem = _crudManager.SelectedGenre;
+                PopulateGenreFields();
+            }            
         }
 
         private void CreateButtonClicked(object sender, RoutedEventArgs e)
         {
             if (ListBoxGenres.SelectedItem == null)
             {
-                _crudManager.CreateGenre(Text_GenreName.Text);
-                ListBoxGenres.ItemsSource = null;
-                PopulateListBox();
-                ListBoxGenres.SelectedItem = _crudManager.SelectedGenre;
-                PopulateGenreFields();
+                if (Text_GenreName.Text.Length > 30)
+                {
+                    MessageBox.Show("Genre Name is too long");
+                }
+                else if (Text_GenreName.Text.Length < 1)
+                {
+                    MessageBox.Show("Genre Name cannot be empty");
+                }
+                else {
+                    _crudManager.CreateGenre(Text_GenreName.Text);
+                    ListBoxGenres.ItemsSource = null;
+                    PopulateListBox();
+                    ListBoxGenres.SelectedItem = _crudManager.SelectedGenre;
+                    PopulateGenreFields();
+                }                
             }
         }
 
