@@ -10,7 +10,9 @@ namespace GamingWPFBusiness
     {
         static void Main(string[] args)
         {
-            
+            var x = new CRUDManager();
+            x.CreateGame("NEWGA32", 12021, 13007, "New Game", 16, (decimal)19.99, "Epic", new System.DateTime(13/11/2020), 4 );
+
         }
 
         // Selecting Entities
@@ -112,11 +114,15 @@ namespace GamingWPFBusiness
         public void CreateGame(string gameID, int consoleID, int genreID, string title, int age, 
             decimal price, string publisher, DateTime release, int multi) {
             using (var db = new GamingContext()) {
+                SelectedGenre = db.Genres.Where(x => x.GenreId == genreID).FirstOrDefault();
+                SelectedConsole = db.Consoles.Where(c => c.ConsoleId == consoleID).FirstOrDefault();
                 var newGame = new Game()
                 {
                     GameId = gameID.Trim(),
-                    ConsoleId = consoleID,
-                    GenreId = genreID,
+                    Console = SelectedConsole,
+                    //ConsoleId = consoleID,
+                    //GenreId = genreID,
+                    Genre = SelectedGenre,
                     Title = title.Trim(),
                     AgeRating = age,
                     Price = price,

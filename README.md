@@ -5,7 +5,7 @@ Repo for the gaming WPF which I'm creating for my individual project
 ................................
 
 # Class Diagram
-...............................
+![image](https://github.com/Shaq10/GamingWPF/blob/main/classdiagram.png)
 
 ## Project Goal
 The goal of this project is to create a WPF application which provides a game 

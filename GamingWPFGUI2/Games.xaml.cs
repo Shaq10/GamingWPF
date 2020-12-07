@@ -204,10 +204,10 @@ namespace GamingWPFGUI2
                 } 
                 else {
                     _crudManager.CreateGame(Text_GameId.Text, int.Parse(Text_GenreId.Text), int.Parse(Text_ConsoleId.Text), Text_Title.Text, int.Parse(Text_AgeRating.Text), decimal.Parse(Text_Price.Text), Text_Publisher.Text, DP_ReleaseDate.SelectedDate.Value, int.Parse(Text_Multiplayers.Text));
-                    ListBoxGames.ItemsSource = null;
+                    //ListBoxGames.ItemsSource = null;
                     PopulateListBox();
-                    ListBoxGames.SelectedItem = _crudManager.SelectedGame;
-                    PopulateGameFields();
+                    //ListBoxGames.SelectedItem = _crudManager.SelectedGame;
+                    //PopulateGameFields();
                     ClearAll();
                 }                
             }
