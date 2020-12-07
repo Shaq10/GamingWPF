@@ -2,16 +2,23 @@
 Repo for the gaming WPF which I'm creating for my individual project
 
 # Entity Relationship Diagram
-................................
+![image](https://github.com/Shaq10/GamingWPF/blob/main/erd.png)
 
 # Class Diagram
 ![image](https://github.com/Shaq10/GamingWPF/blob/main/classdiagram.png)
 
 ## Project Goal
-The goal of this project is to create a WPF application which provides a game 
-purchasing service for customers. Customers can view games available on a number 
-of consoles and choose which to purchase. The project will include all the documentation 
-required to show the process of what was done, how and why
+The goal of this project is to create a 3 Tier WPF application containing a data layer, business layer and presentation layer.
+This application, which will include CRUD functionality, will provide a gaming E-Commerce service . The two users of this app will be 
+Customers and Managers, who will both have access to different parts of the app which are relevant to them as a user. Customers will
+be able to order games with various genres on different consoles and update their personal information.The project will be well documented
+in order to show the process of what was done, how and why
+
+# WPF
+![image](https://github.com/Shaq10/GamingWPF/blob/main/GamingHome.png)
+![image](https://github.com/Shaq10/GamingWPF/blob/main/Games.png)
+![image](https://github.com/Shaq10/GamingWPF/blob/main/Customers.png)
+![image](https://github.com/Shaq10/GamingWPF/blob/main/Orders.png)
 
 # Sprints
 ![image](https://github.com/Shaq10/GamingWPF/blob/main/PreSprints.png)
@@ -101,4 +108,16 @@ All tasks which I set out to complete were done. All CRUD functionality for each
 
 ### Sprint Retrospective
 Majority of the Tasks which were completed for this sprint were similar to other taks which I had done in the previous 2 sprints so it wasn't too difficult or time sonsuming to finish off this work. In order to
-do the Order page as I intended, I learnt how to combine the values from two list boxes containing data from two separate tables.
+do the Order page as I intended, I learnt how to combine the values from two list boxes containing data from two separate tables. I also made some unit tests for my update methods but these failed, although when 
+tested manually these should have passed. Numerous people in the cohort had said issues. I dedicated some time to preparing for the group presentation so I didn't finish my project as early as I hoped but it was still in good time
+
+# Project Review 
+This was a successful project for me because I was able to produce the fully functioning MVP within the given time. All the user stories which I set out to do were completed but I may add extra functionality
+to the app over the christmas period in my own time. The CRUD methods work as expected in the GUI as the layers have been connected well. Both manual as well as unit testing was carried out for the application.
+Documentation, such as the README and Kanban board, was always completed or updated on time and to the best of my ability so it is clear to see all information to do with the project. 
+
+# Project Retrospective
+Agile practices were implemented well throughout this project. Initially I had some timing issues in terms of underestimating how long certain tasks would take but by the 3rd Sprint, I was able to balance my time much better and usually finished all the
+user stories which I planned to carry out. I learnt how to solve many issues which I hadn't come accross prior to this project as we hadn't looked into certain things in depth such as navigation windows. I also found myself taking the initiative to learn new things
+which didn't solve a particular problem but improved my GUI and essentially the user experience. I didn't change many stories throughout the duration of the project as I feel that I had carefully planned beforehand to ensure that everything was covered correctly
+from the beginning. I used the documentation well to plan my sprints, see progress made and keep a record of what was done. This was my first experience of using Scrum for a project and I thoroughly enjoyed the experience and using this methodology

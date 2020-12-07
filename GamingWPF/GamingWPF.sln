@@ -12,7 +12,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{070D0EC7-9736-4EDD-A869-8FB4530C7182}"
 	ProjectSection(SolutionItems) = preProject
 		..\classdiagram.png = ..\classdiagram.png
+		..\Customers.png = ..\Customers.png
+		..\erd.png = ..\erd.png
+		..\Games.png = ..\Games.png
+		..\GamingHome.png = ..\GamingHome.png
 		..\HomeGaming.jpg = ..\HomeGaming.jpg
+		..\Orders.png = ..\Orders.png
 		..\PreSprints.png = ..\PreSprints.png
 		..\README.md = ..\README.md
 		..\Sprint1.png = ..\Sprint1.png
