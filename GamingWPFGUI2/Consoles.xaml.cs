@@ -77,7 +77,7 @@ namespace GamingWPFGUI2
             else if (Text_Manufacturer.Text.Length < 1) {
                 MessageBox.Show("Manufacturer cannot be empty");
             }
-            else if (Text_OnlineCompatible.Text != "Y" || Text_OnlineCompatible.Text != "N") {
+            else if (Text_OnlineCompatible.Text != "Y" && Text_OnlineCompatible.Text != "N") {
                 MessageBox.Show("Online compatibility must be either a Y for Yes or N for No");
             }
             else {
@@ -110,7 +110,7 @@ namespace GamingWPFGUI2
                 {
                     MessageBox.Show("Manufacturer cannot be empty");
                 }
-                else if (Text_OnlineCompatible.Text != "Y" || Text_OnlineCompatible.Text != "N")
+                else if (Text_OnlineCompatible.Text != "Y" && Text_OnlineCompatible.Text != "N")
                 {
                     MessageBox.Show("Online compatibility must be either a Y for Yes or N for No");
                 }
@@ -120,6 +120,7 @@ namespace GamingWPFGUI2
                     PopulateListBox();
                     ListBoxConsoles.SelectedItem = _crudManager.SelectedConsole;
                     PopulateConsoleFields();
+                    ClearAll();
                 }                
             }
         }
@@ -128,7 +129,7 @@ namespace GamingWPFGUI2
         {
             if (ListBoxConsoles.SelectedItem != null)
             {
-                _crudManager.DeleteGame(Text_ConsoleId.Text);
+                _crudManager.DeleteConsole(int.Parse(Text_ConsoleId.Text));
                 ListBoxConsoles.ItemsSource = null;
                 PopulateListBox();
                 PopulateConsoleFields();

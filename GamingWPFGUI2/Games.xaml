@@ -32,23 +32,23 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label x:Name="GameId" Grid.Row="0" Grid.Column="0" Background="LightBlue" >GameId</Label>
+            <Label x:Name="GameId" Grid.Row="0" Grid.Column="0" Background="LightBlue" FontSize="20" >GameId</Label>
             <TextBox x:Name="Text_GameId" Grid.Row="0" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="GenreId" Grid.Row="1" Grid.Column="0" Background="LightBlue" >GenreId</Label>
+            <Label x:Name="GenreId" Grid.Row="1" Grid.Column="0" Background="LightBlue" FontSize="20" >GenreId</Label>
             <TextBox x:Name="Text_GenreId" Grid.Row="1" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="ConsoleId" Grid.Row="2" Grid.Column="0" Background="LightBlue" >ConsoleId</Label>
+            <Label x:Name="ConsoleId" Grid.Row="2" Grid.Column="0" Background="LightBlue" FontSize="20" >ConsoleId</Label>
             <TextBox x:Name="Text_ConsoleId" Grid.Row="2" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="Title" Grid.Row="3" Grid.Column="0" Background="LightBlue" >Title</Label>
+            <Label x:Name="Title" Grid.Row="3" Grid.Column="0" Background="LightBlue" FontSize="20" >Title</Label>
             <TextBox x:Name="Text_Title" Grid.Row="3" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="AgeRating" Grid.Row="4" Grid.Column="0" Background="LightBlue" >Age Rating</Label>
+            <Label x:Name="AgeRating" Grid.Row="4" Grid.Column="0" Background="LightBlue" FontSize="20" >Age Rating</Label>
             <TextBox x:Name="Text_AgeRating" Grid.Row="4" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="Price" Grid.Row="5" Grid.Column="0" Background="LightBlue" >Price</Label>
+            <Label x:Name="Price" Grid.Row="5" Grid.Column="0" Background="LightBlue" FontSize="20" >Price</Label>
             <TextBox x:Name="Text_Price" Grid.Row="5" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="Publisher" Grid.Row="6" Grid.Column="0" Background="LightBlue" >Publisher</Label>
+            <Label x:Name="Publisher" Grid.Row="6" Grid.Column="0" Background="LightBlue" FontSize="20" >Publisher</Label>
             <TextBox x:Name="Text_Publisher" Grid.Row="6" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="ReleaseDate" Grid.Row="7" Grid.Column="0" Background="LightBlue" >ReleaseDate</Label>
+            <Label x:Name="ReleaseDate" Grid.Row="7" Grid.Column="0" Background="LightBlue" FontSize="20" >ReleaseDate</Label>
             <DatePicker x:Name="DP_ReleaseDate" Grid.Row="7" Grid.Column="1"></DatePicker>
-            <Label x:Name="Multiplayers" Grid.Row="8" Grid.Column="0" Background="LightBlue" >Multiplayers</Label>
+            <Label x:Name="Multiplayers" Grid.Row="8" Grid.Column="0" Background="LightBlue" FontSize="20" >Multiplayers</Label>
             <TextBox x:Name="Text_Multiplayers" Grid.Row="8" Grid.Column="1" Background="LightYellow"></TextBox>
         </Grid>
         <Grid Grid.Column= "1">

@@ -36,31 +36,31 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label x:Name="CustomerId" Grid.Row="0" Grid.Column="0" Background="LightBlue" >Customer Id</Label>
+            <Label x:Name="CustomerId" Grid.Row="0" Grid.Column="0" Background="LightBlue" FontSize="20" >Customer Id</Label>
             <TextBox x:Name="Text_CustomerId" Grid.Row="0" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="FirstName" Grid.Row="1" Grid.Column="0" Background="LightBlue" >First Name</Label>
+            <Label x:Name="FirstName" Grid.Row="1" Grid.Column="0" Background="LightBlue" FontSize="20" >First Name</Label>
             <TextBox x:Name="Text_FirstName" Grid.Row="1" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="LastName" Grid.Row="2" Grid.Column="0" Background="LightBlue" >Last Name</Label>
+            <Label x:Name="LastName" Grid.Row="2" Grid.Column="0" Background="LightBlue" FontSize="20" >Last Name</Label>
             <TextBox x:Name="Text_LastName" Grid.Row="2" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="Email" Grid.Row="3" Grid.Column="0" Background="LightBlue" >Email</Label>
+            <Label x:Name="Email" Grid.Row="3" Grid.Column="0" Background="LightBlue" FontSize="20" >Email</Label>
             <TextBox x:Name="Text_Email" Grid.Row="3" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="HouseNum" Grid.Row="4" Grid.Column="0" Background="LightBlue" >House Number</Label>
+            <Label x:Name="HouseNum" Grid.Row="4" Grid.Column="0" Background="LightBlue" FontSize="20" >House Number</Label>
             <TextBox x:Name="Text_HouseNum" Grid.Row="4" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="FirstLineAddress" Grid.Row="5" Grid.Column="0" Background="LightBlue" >First Line Address</Label>
+            <Label x:Name="FirstLineAddress" Grid.Row="5" Grid.Column="0" Background="LightBlue" FontSize="20" >First Line Address</Label>
             <TextBox x:Name="Text_FirstLineAddress" Grid.Row="5" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="SecondLineAddress" Grid.Row="6" Grid.Column="0" Background="LightBlue" >Second Line Address</Label>
+            <Label x:Name="SecondLineAddress" Grid.Row="6" Grid.Column="0" Background="LightBlue" FontSize="20" >Second Line Address</Label>
             <TextBox x:Name="Text_SecondLineAddress" Grid.Row="6" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="City" Grid.Row="7" Grid.Column="0" Background="LightBlue" >City</Label>
+            <Label x:Name="City" Grid.Row="7" Grid.Column="0" Background="LightBlue" FontSize="20" >City</Label>
             <TextBox x:Name="Text_City" Grid.Row="7" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="Postcode" Grid.Row="8" Grid.Column="0" Background="LightBlue" >Postcode</Label>
+            <Label x:Name="Postcode" Grid.Row="8" Grid.Column="0" Background="LightBlue" FontSize="20" >Postcode</Label>
             <TextBox x:Name="Text_Postcode" Grid.Row="8" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="Country" Grid.Row="9" Grid.Column="0" Background="LightBlue" >Country</Label>
+            <Label x:Name="Country" Grid.Row="9" Grid.Column="0" Background="LightBlue" FontSize="20" >Country</Label>
             <TextBox x:Name="Text_Country" Grid.Row="9" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="Mobile" Grid.Row="10" Grid.Column="0" Background="LightBlue" >Mobile</Label>
+            <Label x:Name="Mobile" Grid.Row="10" Grid.Column="0" Background="LightBlue" FontSize="20" >Mobile</Label>
             <TextBox x:Name="Text_Mobile" Grid.Row="10" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="Dob" Grid.Row="11" Grid.Column="0" Background="LightBlue" >D.O.B</Label>
+            <Label x:Name="Dob" Grid.Row="11" Grid.Column="0" Background="LightBlue" FontSize="20" >D.O.B</Label>
             <DatePicker x:Name="DP_Dob" Grid.Row="11" Grid.Column="1" ></DatePicker>
-            <Label x:Name="Gender" Grid.Row="12" Grid.Column="0" Background="LightBlue" >Gender</Label>
+            <Label x:Name="Gender" Grid.Row="12" Grid.Column="0" Background="LightBlue" FontSize="20" >Gender</Label>
             <TextBox x:Name="Text_Gender" Grid.Row="12" Grid.Column="1" Background="LightYellow"></TextBox>
         </Grid>
         <Grid Grid.Column= "1">

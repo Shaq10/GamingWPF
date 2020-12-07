@@ -38,7 +38,6 @@ namespace GamingWPFGUI2
             if (ListBoxOrders.SelectedItem != null)
             {
                 _crudManager.SetSelectedOrder(ListBoxOrders.SelectedItem);
-                //DP_Delivery.SelectedDate = _crudManager.SelectedOrder.DeliveryDate;
             }
         }
 
@@ -66,6 +65,17 @@ namespace GamingWPFGUI2
             }
         }
 
+        private int AgeAt(DateTime dob, DateTime date) {
+            if (date > dob)
+            {
+                var age = date - dob;
+                return (int)(age.Days / 365.25);
+            }
+            else {
+                throw new System.ArgumentException("Error - birthDate is in the future");
+            }
+        }
+
         private void UpdateButtonClicked(object sender, RoutedEventArgs e)
         {
             _crudManager.UpdateOrder(_crudManager.SelectedOrder.OrderId, DP_Delivery.SelectedDate.Value);
@@ -77,9 +87,15 @@ namespace GamingWPFGUI2
         {
             if (ListBoxCustomers.SelectedItem != null && ListBoxGames.SelectedItem != null)
             {
-                _crudManager.CreateOrder(_crudManager.SelectedCustomer.CustomerId, _crudManager.SelectedGame.GameId, System.DateTime.Now, System.DateTime.Now.AddDays(3), _crudManager.SelectedGame.Price);
-                ListBoxOrders.ItemsSource = null;
-                PopulateListBox();
+                if ( AgeAt(_crudManager.SelectedCustomer.Dob.Value , System.DateTime.Now) < _crudManager.SelectedGame.AgeRating) {
+                    MessageBox.Show("Customer is too young to place order for this game");
+                }
+                else {
+                    _crudManager.CreateOrder(_crudManager.SelectedCustomer.CustomerId, _crudManager.SelectedGame.GameId, System.DateTime.Now, System.DateTime.Now.AddDays(3), _crudManager.SelectedGame.Price);
+                    ListBoxOrders.ItemsSource = null;
+                    PopulateListBox();
+                }
+                
             }
             else {
                 MessageBox.Show("Select both a Customer AND Game to complete order!");

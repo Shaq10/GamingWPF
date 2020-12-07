@@ -98,6 +98,7 @@ namespace GamingWPFGUI2
                     PopulateListBox();
                     ListBoxGenres.SelectedItem = _crudManager.SelectedGenre;
                     PopulateGenreFields();
+                    ClearAll();
                 }                
             }
         }

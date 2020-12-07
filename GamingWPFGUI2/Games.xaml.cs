@@ -208,6 +208,7 @@ namespace GamingWPFGUI2
                     PopulateListBox();
                     ListBoxGames.SelectedItem = _crudManager.SelectedGame;
                     PopulateGameFields();
+                    ClearAll();
                 }                
             }
         }

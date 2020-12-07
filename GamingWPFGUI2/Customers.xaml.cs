@@ -83,7 +83,7 @@ namespace GamingWPFGUI2
         private void UpdateButtonClicked(object sender, RoutedEventArgs e)
         {
             int result;
-            Regex regex = new Regex(@"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([azA-Z]{2,4}|[0-9]{1,3})(\]?)$");
+            Regex regex = new Regex(@"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z");
             if (Text_CustomerId.Text.Length > 10)
             {
                 MessageBox.Show("Customer ID cannot be longer than 10 characters");
@@ -180,7 +180,7 @@ namespace GamingWPFGUI2
             if (ListBoxCustomers.SelectedItem == null)
             {
                 int result;
-                Regex regex = new Regex(@"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([azA-Z]{2,4}|[0-9]{1,3})(\]?)$");
+                Regex regex = new Regex(@"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z");
                 if (Text_CustomerId.Text.Length > 10)
                 {
                     MessageBox.Show("Customer ID cannot be longer than 10 characters");
@@ -272,6 +272,7 @@ namespace GamingWPFGUI2
                     PopulateListBox();
                     ListBoxCustomers.SelectedItem = _crudManager.SelectedCustomer;
                     PopulateCustomerFields();
+                    ClearAll();
                 }
                 
             }

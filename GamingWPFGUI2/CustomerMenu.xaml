@@ -13,7 +13,7 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" Click="OrdersButtonClicked">MAKE AN ORDER</Button>
-        <Button Grid.Row="1" Click="CustomersButtonClicked">UPDATE YOUR DETAILS</Button>
+        <Button Grid.Row="0" Click="OrdersButtonClicked" FontSize="36">MAKE AN ORDER</Button>
+        <Button Grid.Row="1" Click="CustomersButtonClicked" FontSize="36">UPDATE YOUR DETAILS</Button>
     </Grid>
 </Page>

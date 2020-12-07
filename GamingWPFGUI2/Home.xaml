@@ -24,8 +24,8 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" Click="ManagerButtonClicked">MANAGER</Button>
-            <Button Grid.Row="1" Click="CustomerButtonClicked">CUSTOMER</Button>
+            <Button Grid.Row="0" Click="ManagerButtonClicked" FontSize="20">MANAGER</Button>
+            <Button Grid.Row="1" Click="CustomerButtonClicked" FontSize="20">CUSTOMER</Button>
         </Grid>
     </Grid>
 </Page>

@@ -85,3 +85,20 @@ Again I completed all of the user stories which I planned to achieve. The majori
 
 ### Sprint Retrospective
 I prioritised my user stories in a way which would allow me to spend more time in the morning on the more difficult tasks. I had a big blocker regarding an Order entry which takes two foreign keys however I managed to solve this after research and speaking with others who also had the exact same problem. In the next sprint I will complete all the function CRUD functionality remaining in the backlog 
+
+## Sprint 5 05/12/2020
+![image](https://github.com/Shaq10/GamingWPF/blob/main/Sprint5.png)
+
+### Sprint Goal
+- [x] Customer can place an order
+- [x] Manager can delete pending orders
+- [x] Customer can cancel orders
+- [x] Validation user input in GUI
+- [x] Orders can be updated (delivery date)
+
+### Sprint Review
+All tasks which I set out to complete were done. All CRUD functionality for each of the 5 tables has been implemented so I have achieved the MVP. In addition to this I have also improved the aesthetics of the GUI so that it has a nice layout and complimenting colours which make the user experience enjoyable
+
+### Sprint Retrospective
+Majority of the Tasks which were completed for this sprint were similar to other taks which I had done in the previous 2 sprints so it wasn't too difficult or time sonsuming to finish off this work. In order to
+do the Order page as I intended, I learnt how to combine the values from two list boxes containing data from two separate tables.

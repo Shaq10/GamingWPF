@@ -25,9 +25,9 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label x:Name="GenreId" Grid.Row="0" Grid.Column="0" Background="LightBlue" >Genre Id</Label>
+            <Label x:Name="GenreId" Grid.Row="0" Grid.Column="0" Background="LightBlue" FontSize="20" >Genre Id</Label>
             <TextBox x:Name="Text_GenreId" Grid.Row="0" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="GenreName" Grid.Row="1" Grid.Column="0" Background="LightBlue" >Genre Name</Label>
+            <Label x:Name="GenreName" Grid.Row="1" Grid.Column="0" Background="LightBlue" FontSize="20" >Genre Name</Label>
             <TextBox x:Name="Text_GenreName" Grid.Row="1" Grid.Column="1" Background="LightYellow"></TextBox>
         </Grid>
         <Grid Grid.Column= "1">

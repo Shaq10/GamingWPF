@@ -27,13 +27,13 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label x:Name="ConsoleId" Grid.Row="0" Grid.Column="0" Background="LightBlue" >Console Id</Label>
+            <Label x:Name="ConsoleId" Grid.Row="0" Grid.Column="0" Background="LightBlue" FontSize="20" >Console ID</Label>
             <TextBox x:Name="Text_ConsoleId" Grid.Row="0" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="ConsoleName" Grid.Row="1" Grid.Column="0" Background="LightBlue" >Console Name</Label>
+            <Label x:Name="ConsoleName" Grid.Row="1" Grid.Column="0" Background="LightBlue" FontSize="20" >Console Name</Label>
             <TextBox x:Name="Text_ConsoleName" Grid.Row="1" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="Manufacturer" Grid.Row="2" Grid.Column="0" Background="LightBlue" >Manufacturer</Label>
+            <Label x:Name="Manufacturer" Grid.Row="2" Grid.Column="0" Background="LightBlue" FontSize="20" >Manufacturer</Label>
             <TextBox x:Name="Text_Manufacturer" Grid.Row="2" Grid.Column="1" Background="LightYellow"></TextBox>
-            <Label x:Name="OnlineCompatible" Grid.Row="3" Grid.Column="0" Background="LightBlue" >Online Compatible</Label>
+            <Label x:Name="OnlineCompatible" Grid.Row="3" Grid.Column="0" Background="LightBlue" FontSize="20" >Online Compatible</Label>
             <TextBox x:Name="Text_OnlineCompatible" Grid.Row="3" Grid.Column="1" Background="LightYellow"></TextBox>
         </Grid>
         <Grid Grid.Column= "1">

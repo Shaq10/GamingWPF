@@ -16,10 +16,10 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" Click="GamesButtonClicked">GAMES</Button>
-        <Button Grid.Row="1" Click="GenresButtonClicked">GENRES</Button>
-        <Button Grid.Row="2" Click="ConsolesButtonClicked">CONSOLES</Button>
-        <Button Grid.Row="3" Click="CustomersButtonClicked">CUSTOMERS</Button>
-        <Button Grid.Row="4" Click="OrdersButtonClicked">ORDERS</Button>        
+        <Button Grid.Row="0" Click="GamesButtonClicked" FontSize="36">GAMES</Button>
+        <Button Grid.Row="1" Click="GenresButtonClicked" FontSize="36">GENRES</Button>
+        <Button Grid.Row="2" Click="ConsolesButtonClicked" FontSize="36">CONSOLES</Button>
+        <Button Grid.Row="3" Click="CustomersButtonClicked" FontSize="36">CUSTOMERS</Button>
+        <Button Grid.Row="4" Click="OrdersButtonClicked" FontSize="36">ORDERS</Button>        
     </Grid>
 </Page>

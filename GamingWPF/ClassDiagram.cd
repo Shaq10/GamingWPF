@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="GamingWPF.Console">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QBgAAAAAACAAAAAEAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>ClassCustomisations\Console.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GamingWPF.Customer">
+    <Position X="9.25" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAEAAEAAYCAAAACMAAAAgAAACAIAABCAABAAAAAAAAg=</HashCode>
+      <FileName>ClassCustomisations\Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GamingWPF.Game">
+    <Position X="2.25" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ABGAAAAAAQAIIEAECAMAAAAAAAAAAAAAgAAAAAEAAAA=</HashCode>
+      <FileName>ClassCustomisations\Game.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GameId" />
+      <Property Name="ConsoleId" />
+      <Property Name="GenreId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GamingWPF.Genre">
+    <Position X="4.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAIAAEAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>ClassCustomisations\Genre.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GamingWPF.Order">
+    <Position X="6.5" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>GAEAAAAAAAAAAAAEBAEAABAAAAgAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClassCustomisations\Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CustomerId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="System.String" Collapsed="true">
+    <Position X="10" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Orientation="Bottom" Position="0.394" />
+  </Class>
+  <Class Name="System.Int32" Collapsed="true">
+    <Position X="3.25" Y="3" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.353" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
