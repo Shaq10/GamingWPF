@@ -1,18 +1,16 @@
 # GamingWPF
-Repo for the gaming WPF which I'm creating for my individual project
+## Project Goal
+The goal of this project is to create a 3 Tier WPF application containing a data layer, business layer and presentation layer.
+This application, which will include CRUD functionality, will provide a gaming E-Commerce service . The two users of this app will be 
+Customers and the Manager, who will both have access to different parts of the app which are relevant to them as a user. Customers will
+be able to order games with various genres on different consoles and update their personal information.The project will be well documented
+in order to show the process of what was done, how and why.
 
 # Entity Relationship Diagram
 ![image](https://github.com/Shaq10/GamingWPF/blob/main/erd.png)
 
 # Class Diagram
 ![image](https://github.com/Shaq10/GamingWPF/blob/main/classdiagram.png)
-
-## Project Goal
-The goal of this project is to create a 3 Tier WPF application containing a data layer, business layer and presentation layer.
-This application, which will include CRUD functionality, will provide a gaming E-Commerce service . The two users of this app will be 
-Customers and Managers, who will both have access to different parts of the app which are relevant to them as a user. Customers will
-be able to order games with various genres on different consoles and update their personal information.The project will be well documented
-in order to show the process of what was done, how and why
 
 # WPF
 ![image](https://github.com/Shaq10/GamingWPF/blob/main/GamingHome.png)
@@ -53,13 +51,13 @@ I overestimated how much work I'd be able to get done within the class time. How
 - [x] View all Games
 
 ### Sprint Review
-I was happy with this sprint. I prioritised the user stories which I was unable to complete during Sprint 1 and complete these. In the process I also comleted some other user stories.
+I was happy with this sprint. I prioritised the user stories which I was unable to complete during Sprint 1 and complete these. In the process I also completed some other user stories.
 The creating a Customer in GUI user story will be moved to the next sprint as it will be achievable in this one. I also had some time to start on some other functionality which covers some of
 the user stories which I have set for Sprint 3. 
 ### Sprint Retrospective
 I managed to use my time much better than the previous sprint, taking into account there was more time to get things done as I didn't have an exam today. I did come across some small blocks mainly 
 regarding the GUI however after doing some research I was able to solve these issues and in the process also learnt some more information about navigation windows.
-I did spend some time in the evening working on the user stories but I also had to redo my Sparkhire video due to audio issues with the previous one, so this took some of my time which I had allocated.
+I did spend some time in the evening working on the user stories but I also had to redo my Sparkhire video, so this took some of my time which I had allocated.
 
 ## Sprint 3 03/12/2020
 ![image](https://github.com/Shaq10/GamingWPF/blob/main/Sprint3.png)
@@ -107,9 +105,9 @@ I prioritised my user stories in a way which would allow me to spend more time i
 All tasks which I set out to complete were done. All CRUD functionality for each of the 5 tables has been implemented so I have achieved the MVP. In addition to this I have also improved the aesthetics of the GUI so that it has a nice layout and complimenting colours which make the user experience enjoyable
 
 ### Sprint Retrospective
-Majority of the Tasks which were completed for this sprint were similar to other taks which I had done in the previous 2 sprints so it wasn't too difficult or time sonsuming to finish off this work. In order to
+Majority of the Tasks which were completed for this sprint were similar to other taks which I had done in the previous 2 sprints so it wasn't too difficult or time consuming to finish off this work. In order to
 do the Order page as I intended, I learnt how to combine the values from two list boxes containing data from two separate tables. I also made some unit tests for my update methods but these failed, although when 
-tested manually these should have passed. Numerous people in the cohort had said issues. I dedicated some time to preparing for the group presentation so I didn't finish my project as early as I hoped but it was still in good time
+tested manually these should have passed. Numerous people in the cohort had the same issue. I dedicated some time to preparing for the group presentation so I didn't finish my project as early as I hoped but it was still in good time
 
 # Project Review 
 This was a successful project for me because I was able to produce the fully functioning MVP within the given time. All the user stories which I set out to do were completed but I may add extra functionality
